@@ -1,0 +1,21 @@
+🧾 PR #3: Introduced process_lhs() method to Transform for API consistency Ticket: #24886 Status: Open PR Link: github.com/Samriddha9619/django/pull/19885
+
+Summary:
+
+Added process_lhs() to the Transform base class to mirror the Lookup API.
+
+Improves consistency in SQL generation and prepares transforms for future refactors.
+
+Scoped change—no functional impact, no new tests required.
+
+Removed Upper refactor after test failures to keep patch clean and focused.
+
+Reflections:
+
+First structural PR aimed at internal API consistency.
+
+Learned how Django compiles SQL expressions and how Transform interacts with Lookup.
+
+Practiced scoping changes tightly and communicating intent clearly in the PR description.
+
+Felt confident navigating CI failures, isolating lint issues, and keeping the patch contributor-ready.

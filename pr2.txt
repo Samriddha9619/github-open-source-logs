@@ -1,18 +1,23 @@
-🧾 PR #2: Clarify warning for UniqueConstraint(nulls_distinct)
-Ticket: Already assigned Status: Closed (mistaken submission) Summary:
+🧾 PR #2: Clarify warning for UniqueConstraint(nulls_distinct) 
 
--Improved warning message to clarify that only PostgreSQL 15+ supports nulls_distinct.
+Ticket: Already assigned Status: Closed (mistaken submission) 
 
--Clarified behavior on other backends (SQLite, MySQL, MariaDB).
+PR Link: github.com/Samriddha9619/django/pull/19884
 
--Closed PR after realizing ticket was already claimed.
+Summary:
 
-***Reflections:
+*Improved warning message to clarify that only PostgreSQL 15+ supports nulls_distinct.
 
--Learned the importance of checking ticket ownership before submitting.
+*Clarified behavior on other backends (SQLite, MySQL, MariaDB).
 
--Engaged respectfully with @mriduldhall and acknowledged the mistake.
+*Closed PR after realizing the ticket was already claimed.
 
--Still proud of the patch quality and clarity of the warning message.
+Reflections:
 
--This was a growth moment—handled with humility and professionalism.
+*Learned the importance of checking ticket ownership before submitting.
+
+*Engaged respectfully with @mriduldhall and acknowledged the mistake.
+
+*Still proud of the patch quality and clarity of the warning message.
+
+*This was a growth moment—handled with humility and professionalism.
