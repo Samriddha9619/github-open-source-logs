@@ -1,0 +1,16 @@
+PR #4: Improve migration docs for UniqueConstraint(nulls_distinct) and ManyToMany transitions
+Ticket: #35877
+Status: Open
+PR Link: https://github.com/Samriddha9619/django/pull/19886
+
+Summary:
+- Updated migration documentation to clarify behavior when switching from an implicit ManyToManyField to a custom through model.
+- Explained that Django does not automatically preserve the unique index on foreign keys during this transition.
+- Advised contributors to manually add a UniqueConstraint to maintain consistent behavior across database backends.
+- Aimed to prevent subtle bugs and improve migration reliability for users.
+
+Reflections:
+- First contribution focused on migration documentation clarity and backend consistency.
+- Learned how Django handles implicit vs custom through models and the impact on constraints.
+- Practiced writing educational notes that balance precision and accessibility.
+- Felt proud of anticipating contributor confusion and offering a proactive fix.

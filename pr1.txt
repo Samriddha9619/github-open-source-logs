@@ -1,25 +1,16 @@
-🧾 PR #1: Fix query parameter concatenation in RedirectView 
-
-Ticket: #36488 Status: Open 
-
-PR Link: github.com/django/django/pull/19833
+PR #1: Fix query parameter concatenation in RedirectView
+Ticket: #36480
+Status: Merged
+PR Link: https://github.com/django/django/pull/19833
 
 Summary:
-
-*Fixed incorrect appending of "?" in RedirectView when the target URL already had query parameters.
-
-*Used urllib.parse.urlparse to detect existing query strings and append "&" or "?" appropriately.
-
-*Added tests in generic_views/test_base.py.
-
-*Acknowledged @nessita for suggesting the cleaner approach.
+- Fixed incorrect appending of "?" in RedirectView when the target URL already had query parameters.
+- Used urllib.parse.urlparse to detect existing query strings and append "&" or "?" appropriately.
+- Added tests in generic_views/test_base.py.
+- Acknowledged @nessita for suggesting the cleaner approach.
 
 Reflections:
-
-*First real PR with test coverage and logic fix.
-
-*Learned how Django handles redirects and query strings.
-
-*Practiced writing a clear PR description and checklist.
-
-*Felt proud of the respectful acknowledgment and clean implementation.
+- First real PR with test coverage and logic fix.
+- Learned how Django handles redirects and query strings.
+- Practiced writing a clear PR description and checklist.
+- Felt proud of the respectful acknowledgment and clean implementation.
