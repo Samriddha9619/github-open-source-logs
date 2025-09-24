@@ -1,0 +1,17 @@
+PR #5
+Title: Fixed #33113 — Documented usage and caveats of HTML5 date input in DateInput widget
+Ticket: #33113
+Status: Open
+PR Link: https://github.com/django/django/pull/19902
+
+Summary:
+- Added usage examples for customizing DateInput with input_type='date' and attrs={'type': 'date'}.
+- Merged the intent of PRs #14905 and #17327, following @nessita’s suggestion.
+- Included a warning explaining why Django defaults to type="text" — due to browser-controlled localization and formatting issues.
+- Referenced tickets #16630 and #34853 to provide historical and real-world context.
+
+Reflections:
+- First doc-focused PR that consolidated two stalled efforts into a unified, reviewer-ready patch.
+- Learned how Django balances usability with browser quirks in form rendering.
+- Practiced doc formatting, linting, and aligning with maintainer expectations.
+- Felt proud of the stewardship — crediting past contributors and following through on Nessita’s guidance.
