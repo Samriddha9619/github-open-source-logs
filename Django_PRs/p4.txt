@@ -1,16 +1,17 @@
-PR #4: Improve migration docs for UniqueConstraint(nulls_distinct) and ManyToMany transitions
-Ticket: #35877
-Status: Open
-PR Link: https://github.com/Samriddha9619/django/pull/19886
+## PR #4: Clarified migration behavior for ManyToManyField transitions and UniqueConstraint usage  
+**Ticket:** [#35877](https://code.djangoproject.com/ticket/35877)  
+**Status:** Merged  
+**PR Link:** [github.com/Samriddha9619/django/pull/19886](https://github.com/Samriddha9619/django/pull/19886)
 
-Summary:
-- Updated migration documentation to clarify behavior when switching from an implicit ManyToManyField to a custom through model.
-- Explained that Django does not automatically preserve the unique index on foreign keys during this transition.
-- Advised contributors to manually add a UniqueConstraint to maintain consistent behavior across database backends.
-- Aimed to prevent subtle bugs and improve migration reliability for users.
+### Summary
+- Improved migration documentation to clarify behavior when switching from an implicit `ManyToManyField` to a custom `through` model.
+- Highlighted that Django does not automatically preserve the unique index on foreign keys during this transition.
+- Advised contributors to manually add a `UniqueConstraint` to maintain consistent behavior across database backends.
+- Moved guidance about constraint naming into the surrounding paragraph for clarity and consistency with Django’s doc style.
 
-Reflections:
-- First contribution focused on migration documentation clarity and backend consistency.
-- Learned how Django handles implicit vs custom through models and the impact on constraints.
-- Practiced writing educational notes that balance precision and accessibility.
-- Felt proud of anticipating contributor confusion and offering a proactive fix.
+### Reflections
+- First merged contribution to Django—focused on migration clarity and backend consistency.
+- Learned how Django handles implicit vs custom `through` models and the impact on constraints.
+- Practiced writing precise, reviewer-friendly documentation and responding to feedback with humility.
+- Understood the importance of clean commit history—will be more mindful about squashing and tidiness in future PRs.
+- Felt proud of surfacing a subtle behavior and offering a proactive fix that improves contributor experience.
