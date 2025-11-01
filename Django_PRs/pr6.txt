@@ -1,0 +1,17 @@
+PR #6  
+Title: Fixed #35824 — Improved documentation for `patch_cache_control()` in Django’s caching guide  
+Ticket: #35824  
+Status: Open  
+PR Link: https://github.com/django/django/pull/19922
+
+Summary:
+- Added a parameter-to-Cache-Control transformation table to clarify how keyword arguments map to HTTP headers.
+- Included practical examples for common caching scenarios: cache durations, CDN control, sensitive data handling, and revalidation.
+- Explained why `patch_cache_control()` is preferred over manual header setting, bridging HTTP caching concepts with Django’s utilities.
+- Linked to MDN’s Cache-Control docs for external reference and best practices.
+
+Reflections:
+- First PR where I shaped a full documentation section from scratch — balancing clarity, depth, and accessibility.
+- Learned how to translate abstract HTTP caching logic into Django-specific guidance.
+- Focused on empowering new contributors and users by demystifying a commonly misunderstood helper.
+- Felt proud to address a long-standing doc gap and align with community feedback from the Trac ticket.
