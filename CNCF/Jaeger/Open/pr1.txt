@@ -1,0 +1,19 @@
+PR #1  
+Title: Fix histogram buckets for storage latency metrics  
+Ticket/Issue: #7217  
+Status: Open  
+PR Link: https://github.com/jaegertracing/jaeger/pull/7672
+
+Summary:
+- Fixed a mismatch between storage latency metric units and histogram bucket definitions.
+- Previously, jaeger_storage_bulk_index_latency_ok_seconds recorded values in seconds, but buckets were defined as if they were milliseconds. This caused realistic latencies (~20–30ms = 0.02s) to fall into the first bucket (le="5"), making the histogram unusable.
+- Enabled bucket parsing for metrics.Timer in internal/metrics/metrics.go, allowing timers to accept buckets:"..." struct tags.
+- Updated internal/metrics/otelmetrics/factory.go to convert []time.Duration buckets into float64 seconds and pass them to OpenTelemetry histograms via metric.WithExplicitBucketBoundaries.
+- Annotated LatencyOk and LatencyErr timers in internal/storage/v1/api/spanstore/spanstoremetrics/write_metrics.go with ms‑scale buckets (5ms–10s).
+- Verified with lint and unit tests, and confirmed /metrics output now distributes values across realistic ranges instead of piling into le="5".
+
+Reflections:
+- First contribution to Jaeger’s storage metrics — learned how OpenTelemetry histograms handle units and bucket boundaries.
+- Dug into Jaeger’s metrics pipeline (Timer, Histogram, OTEL factory) to trace how durations are recorded and exposed.
+- Realized that even technically consistent systems can produce misleading metrics if bucket definitions don’t match observed values.
+- Proud to improve observability for Jaeger users, ensuring latency histograms now provide meaningful distribution for millisecond‑scale operations.

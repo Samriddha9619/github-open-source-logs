@@ -1,0 +1,17 @@
+PR #7  
+Title: Fixed #36233 — Fixed SQLite DecimalField precision loss for large integers  
+Ticket: #36233  
+Status: Open  
+PR Link: https://github.com/django/django/pull/20346
+
+Summary:
+- Addressed a precision bug in SQLite when handling DecimalField values with more than 15 digits.
+- Updated django.db.backends.sqlite3.operations.py to bypass lossy float conversion by converting native integers directly to Decimal.
+- Added regression test test_sqlite_integer_precision_bypass to confirm correct round‑trip storage and retrieval of 16‑digit integers.
+- Introduced a new HighPrecision model in the test suite to validate behavior.
+
+Reflections:
+- First time fixing a core backend bug in Django, beyond documentation.
+- Learned how SQLite’s lack of a native decimal type interacts with IEEE 754 float limitations.
+- Gained confidence in writing regression tests for edge cases.
+- Proud to contribute a fix that prevents silent data corruption and runtime crashes for users relying on high‑precision IDs.
