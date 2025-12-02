@@ -1,6 +1,6 @@
 PR #3: Introduced process_lhs() method to Transform for API consistency
 Ticket: #24886
-Status: Open
+Status: Open ( Approved) 
 PR Link: https://github.com/Samriddha9619/django/pull/19885
 
 Summary:
